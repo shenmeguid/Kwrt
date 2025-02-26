@@ -14,6 +14,8 @@ sed -i 's/DEFAULT_PACKAGES +=/DEFAULT_PACKAGES += kmod-usb-hid kmod-mmc kmod-sdh
 
 mv -f tmp/r81* feeds/kiddin9/
 
+sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+
 sed -i 's/256/1024/g' target/linux/x86/image/Makefile
 
 
